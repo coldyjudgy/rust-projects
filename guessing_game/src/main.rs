@@ -23,7 +23,12 @@ fn main() {
         let guess: u32 = guess.trim().parse()
             .expect("Please type a number!");
         */
-         
+
+        /*  Handling error by falling back to a default value
+        let guess: u32 = guess.trim().parse()
+            .unwrap_or(29);
+        */
+        
         let guess: u32 = match guess.trim().parse() { // trim() removes /n.
             Ok(num) => num,
             Err(_) => continue,
